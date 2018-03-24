@@ -614,10 +614,13 @@ a {
 	width: 1200px;
 	height: 120px;
 	font-size: 0;
-
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	box-sizing: border-box;
 }
 .footer-column {
-	display: inline-block;
+
 	width: 33%;
 	height: 120px;
 	text-align: center;
@@ -646,7 +649,7 @@ a {
 }
 .footer-copyright {
 
-	padding-left: 10px;
+	padding-left: 20px;
 	height: 120px;
 }
 .footer-copyright span {
