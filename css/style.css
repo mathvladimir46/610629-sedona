@@ -246,8 +246,8 @@ a {
 .main-nav {
 	background-color: #ffffff;
 }
-.site-nav-current {
-	color: #766357;
+.site-nav .site-nav-current  {
+	color:#766357;
 }
 .user-choice fieldset {
 	border: none;
@@ -343,7 +343,8 @@ a {
 	background-color: #604e43;
 }
 .catalog-button-order:active {
-	background-color: rgba(80, 62, 51, .5);
+	background-color: #503e33;
+	color: rgba(255, 255, 255, .3);
 }
 .catalog-item-rating {
 	font-size: 14px;
