@@ -106,7 +106,11 @@
       </div>
       <a class="request-hotel-button" href="#">Поиск гостиницы в Седоне</a>
       <div class="request-map">
-        <img class="map-image" src="img/mapjpg.jpg" width="1200" height="593" alt="Карта">
+            <h2 class="visually-hidden">Как нас найти</h2>
+            <p class="request-map active-map">
+<!--        <iframe src="https://www.google.ru/maps/place/%D0%A1%D0%B5%D0%B4%D0%BE%D0%BD%D0%B0,+%D0%90%D1%80%D0%B8%D0%B7%D0%BE%D0%BD%D0%B0+86336,+%D0%A1%D0%A8%D0%90/@34.8544438,-111.830158,13z/data=!3m1!4b1!4m5!3m4!1s0x872da132f942b00d:0x5548c523fa6c8efd!8m2!3d34.8697395!4d-111.7609896" width="1200" height="475" allowfullscreen></iframe>-->
+            <img class="map-image" src="img/mapjpg.jpg" width="1200" height="593" alt="Карта">
+            </p>
         <form class="request-form" action="https://echo.htmlacademy.ru" method="post">
           <div class="request-item request-wrapper">
             <label for="request-date">Дата заезда:</label>
@@ -198,7 +202,66 @@
       </p>
     </div>
   </footer>
-  <script>[].forEach.call(document.querySelectorAll("*"), function (a) { a.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16) })</script>
+  <script>[].forEach.call(document.querySelectorAll("*"), function (a) { a.style.outline = "1px solid #" + (~~(Math.random() * (1 << 24))).toString(16) });
+  
+    var link=document.querySelector(".request-form-link");
+
+    var popup=document.querySelector(".request-form");
+    var close=popup.querySelector(".request-form-close");
+
+    var form=popup.querySelector("form");
+    var datein=popup.querySelector("[name=date-in]");
+    var dateout=popup.querySelector("[name=date-out]");
+    var adults=popup.querySelector("[name=adults-number]");
+    var childs=popup.querySelector("[name=childs-number]");
+
+    var isStorageSupport= true;
+    var storage=" ";
+
+    try {
+      storage=localStorage.getItem("datein");
+    } catch(err) {
+      isStorageSupport= false; 
+    }
+    link.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popup.classList.add("request-form-show");
+      if (storage) {
+        datein.value = storage;
+        dateout.focus(); }
+        else {
+          datein.focus();
+        }
+    });
+    close.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      popup.classList.remove("request-form-show");
+      popup.classList.remove("request-form-error");
+    });
+    form.addEventListener("submit", function(evt) {
+      if (!datein.value || !dateout.value || !adults.value || !childs.value) {
+        evt.preventDefault();
+        popup.classList.remove("request-form-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("request-form-error");
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem("datein", datein.value);
+        }
+      }
+    });
+    window.addEventListener("keydown", function(evt) {
+      if ( evt.Code ===27) {
+        evt.preventDefault();
+        if ( popup.classList.contains("request-form-show")) {
+          popup.classList.remove("request-form-show");
+          popup.classList.remove("request-form-error");
+        }
+
+      }
+    });
+
+  </script>
 </body>
 
 </html>

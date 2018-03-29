@@ -278,6 +278,13 @@ a {
 	position: absolute;
 	left: 0;
 }
+/*	z-index: 1;
+}
+.request-map .active-map iframe {
+	position: relative;
+	z-index: 2;
+	border: 0;
+}*/
 
 .request-item input::placeholder {
 	color: #000000;
@@ -449,11 +456,29 @@ a {
 	background-color: #5496bd;
 	color: rgba(255,255,255, .3);
 }
+@keyframes good {
+	0% { transform: translateY(3000px);}
+	70% { transform: translateY(-30px);}
+	90% { transform: translateY(10px);}
+	100% { transform: translateY(0);}
+}
+@keyframes shake {
+	0%, 100% { transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-10px);}
+	20%, 40%, 60%, 80% { transform: translateX(10px);}
+}
+.request-form-show {
+	display: block;
+	animation: good 0.6s;
+}
+.request-form-error {
+	animation: shake 0.6s;
+}
 .request-form-close {
 	position: absolute;
 	top: 0;
 	right: 280px;
-	z-index: 5;
+	
 	width: 22px;
 	height: 22px;
 	font-size: 0;
