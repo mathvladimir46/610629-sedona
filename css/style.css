@@ -772,10 +772,6 @@ a {
 	margin-top: 7px;
 }
 
-
-.catalog-item .catalog-item-table td:nth-child(2) {
-	margin-right: 10px;
-}
 .catalog-item-name {
 	font-size: 21px;
 	line-height: 26px;
@@ -841,14 +837,17 @@ a {
 }
 .catalog-item-info {
 	width: 900px;
-
+	margin-top: 15px;
+	
 }
 
 .catalog-item-wrapper {
 	display: flex;
   justify-content: space-between;
 }
-
+.catalog-item-wrapper .catalog-item-table td {
+	margin-right: 20px;
+}
 .info-hotel-name {
   justify-content: space-between;
 	display: flex;
@@ -862,21 +861,7 @@ a {
 .info-hotel-name h2 {
 	margin: 0;
 }
-.info-hotel-price {
-	width: 900px;
-	min-height: 30px;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
 
-.info-hotel-order {
-	width: 900px;
-	min-height: 30px;
-	display: flex;
-	margin: 0;
-	padding: 0;
-}
 .catalog-button-info,
 .catalog-button-order {
   padding: 3px 17px;
