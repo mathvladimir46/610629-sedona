@@ -50,6 +50,7 @@ a {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+
 }
 
 .site-nav {
@@ -57,7 +58,7 @@ a {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
-	padding: 20px 0;
+	padding: 25px 0;
 	margin: 0;
 	padding-left: 6%;
 	padding-right: 6%;
@@ -66,6 +67,7 @@ a {
 .site-nav a {
 	color: #000000;
 	text-align: center;
+
 }
 .site-nav li {
 	width: 20%;
@@ -97,15 +99,17 @@ a {
 	padding: 0;
 	display: flex;
 	flex-direction: column;
+	margin-top: -10px;
 }
 .intro {
 	width: 1200px;
-	min-height: 550px;
+	height: 507px;
 	background-color: #9ac2db;
 	background-image: url("../img/filter-maska.png"), url("../img/index-bg.jpg");
 	background-position: center bottom, center top;
 	background-size: 100%, 100%;
 	background-repeat: no-repeat;
+	
 }
 .intro-title {
 	text-align: center;
@@ -124,9 +128,13 @@ a {
 	font-size: 21px;
 	font-weight: 700;
 	text-align: center;
+	margin-top: 60px;
+	
 }
 .advantages-subtitle  {
 	text-align: center;
+	margin-top: 28px;
+	margin-bottom: 50px;
 }
 .advantages-list {
 	margin: 0;
@@ -151,7 +159,8 @@ a {
 
 .advantages-item .advantages-item-heading:after {
 	display: block;
-	margin-top: 10px;
+	margin-top: 15px;
+	margin-bottom: 5px;
 	line-height: 20px;
 	counter-increment: list-count;
 	content: "– №" counter(list-count) " –";
@@ -162,7 +171,16 @@ a {
 .more-advantages .advantages-item-heading:after {
 	content: none;
 }
-
+.more-advantages .advantages-item-heading {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.advantages-item .more-advantages-item img {
+	margin-top: 10px;
+}
+.advantages-item .more-advantages-item p {
+	padding-bottom: 10px;
+}
 .advantages-significant {
 	width: 100%;
 	display: flex;
@@ -235,11 +253,13 @@ a {
 	text-align: center;
 	padding: 53px 65px;
 	box-sizing: border-box;
+	height: 255px;
 }
 
 .more-advantages {
 	margin: 0;
 	padding: 0;
+	height: 330px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -263,6 +283,8 @@ a {
 	font-size: 21px;
 	font-weight: 700;
 	line-height: 21px;
+	margin-top: 0;
+	padding-bottom: 10px;
 }
 
 .request {
@@ -312,6 +334,7 @@ a {
 	display: inline-block;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 30px;
 	background-color: #766357;
 }
 .request-hotel-button:hover,
@@ -481,39 +504,14 @@ a {
 .request-form-error {
 	animation: shake 0.6s;
 }
-/*.request-form-close {
-	position: absolute;
-	top: 0;
-	right: 280px;
 
-	width: 22px;
-	height: 22px;
-	font-size: 0;
-	background-color: red;
-	border: 0;
-}
-.request-form-close::before,
-.request-form-close::after {
-	content: "";
-	position: absolute;
-	top: 10px;
-	left: 2px;
-	width: 19px;
-	height: 3px;
-	background-color: #000000;
-}
-.request-form-close::before {
-	transform: rotate(45deg);
-}
-.request-form-close::after {
-	transform: rotate(-45deg);*/
-}
 /*------INNER PAGE ----*/
 
 
 
 
 .container {
+	width: 1200px;
 	margin: 0;
 	padding: 0;
 }
@@ -547,7 +545,7 @@ a {
 	margin-top: 20px;
 }
 .user-choice fieldset:not(:nth-child(3)) {
-	margin-left: 60px;
+	margin-left: 50px;
 }
 .user-choice legend {
 	font-size: 16px;
@@ -756,10 +754,10 @@ a {
 	color: #000000;
 	text-decoration: none;
 }
-.sorting-active-up {
+.sorting-active-up img {
 	color: rgba(0,0,0, .3);
 }
-.sorting-price-down {
+.sorting-price-down img {
 	color: #81b3d2;
 }
 .catalog-list {
@@ -774,11 +772,9 @@ a {
 	margin-top: 7px;
 }
 
-.catalog-item-type,
-.catalog-item-price b {
-	color: #333333;
-	font-weight: 400;
-	line-height: 21px;
+
+.catalog-item .catalog-item-table td:nth-child(2) {
+	margin-right: 10px;
 }
 .catalog-item-name {
 	font-size: 21px;
@@ -849,7 +845,7 @@ a {
 }
 
 .catalog-item-wrapper {
-  display: flex;
+	display: flex;
   justify-content: space-between;
 }
 
@@ -873,12 +869,7 @@ a {
 	margin: 0;
 	padding: 0;
 }
-/*.info-hotel-price p:first-child {
-	margin: 5px 0;
-}
-.info-hotel-price p:nth-child(2) {
-	margin: 5px 0 5px 20px;
-}*/
+
 .info-hotel-order {
 	width: 900px;
 	min-height: 30px;
@@ -920,6 +911,7 @@ a {
 	text-align: center;
 	vertical-align: top;
 	margin: 0;
+	margin-bottom: 15px;
 }
 
 .footer-main-button {
