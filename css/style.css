@@ -160,13 +160,13 @@ a {
 .advantages-item:not(.advantages-significant):not(.more-advantages-wrapper) {
 	width: 33.33333333333333%;
 	text-align: center;
-	padding: 45px 45px 66px 45px;
+	padding: 45px 45px 45px 45px;
 	box-sizing: border-box;
 }
 .advantages-item .advantages-item-heading:after {
 	display: block;
-	margin-top: 15px;
-	margin-bottom: 5px;
+	margin-top: 20px;
+	margin-bottom: 0px;
 	line-height: 20px;
 	counter-increment: list-count;
 	content: "– №" counter(list-count) " –";
@@ -184,7 +184,7 @@ a {
 	margin-top: 10px;
 }
 .advantages-item .more-advantages-item p {
-	padding-bottom: 10px;
+	margin-bottom: 20px;
 }
 .advantages-significant {
 	width: 100%;
@@ -268,9 +268,8 @@ a {
 .significant-point {
 	width: 33.33333333333333%;
 	text-align: center;
-	padding: 53px 65px;
-	box-sizing: border-box;
-	height: 255px;
+	padding: 45px 0 40px 0;
+	box-sizing: content-box;
 }
 .more-advantages {
 	margin: 0;
@@ -328,6 +327,9 @@ a {
 }
 .request-item input::placeholder {
 	color: #000000;
+}
+.request-offer {
+	margin-top: 50px;
 }
 .request-offer h2 {
 	color: #000000;
@@ -436,7 +438,7 @@ a {
 	right: 0;
 }
 .request-wrapper label {
-	padding-top: 10px;
+	padding-top: 5px;
 }
 .request-item input:hover {
 	background-color: #ebebeb;
@@ -466,6 +468,9 @@ a {
 }
 .request-date:active {
 	background-color: rgba(255,255,255, .7);
+}
+.request-child {
+	padding-left: 50px;
 }
 .request-people {
 	color: #a9a9a9;
@@ -953,7 +958,7 @@ a {
   background-color: #ffffff;
   opacity: 0.9;
 	bottom: 0;
-	margin: 35px 0;
+	padding-bottom: 50px;
 }
 .footer-column {
 	width: 33%;
