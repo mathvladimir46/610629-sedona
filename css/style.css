@@ -296,22 +296,14 @@ a {
 
 .request-map {
 	position: relative;
-	min-height: 447px;
+	min-height: 500px;
 	overflow: hidden;
 }
-
 .request-map .map-image {
 	position: absolute;
+	
 	left: 0;
 }
-/*	z-index: 1;
-}
-.request-map .active-map iframe {
-	position: relative;
-	z-index: 2;
-	border: 0;
-}*/
-
 .request-item input::placeholder {
 	color: #000000;
 }
@@ -407,7 +399,7 @@ a {
 }
 
 .request-items-container {
-  margin-bottom: 28px;
+  margin-bottom: 52px;
 }
 
 .request-item button {
@@ -418,6 +410,7 @@ a {
 .request-wrapper input {
 	width: 347px;
 	margin-left: 5px;
+	padding-top: 10px;
 }
 
 .request-wrapper button {
@@ -426,9 +419,9 @@ a {
 	right: 0;
 }
 
-/*.request-wrapper label {
-	flex-grow: 1;
-}*/
+.request-wrapper label {
+	padding-top: 10px;
+}
 
 
 .request-item input:hover {
@@ -480,6 +473,7 @@ a {
 	width: 460px;
 	height: 60px;
 	border: none;
+	
 }
 .request-button:hover,
 .request-button:focus {
@@ -915,7 +909,8 @@ a {
   width: 100%;
   background-color: #ffffff;
   opacity: 0.9;
-  bottom: 0;
+	bottom: 0;
+	margin: 35px 0;
 }
 
 
